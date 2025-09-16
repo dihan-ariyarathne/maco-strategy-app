@@ -16,7 +16,9 @@ from google.cloud import bigquery
 def fetch_yahoo_prices(symbol: str, days: int = 730) -> pd.DataFrame:
     import time
     import json
-    max_retries = 3
+    import requests
+    max_retries = 5
+    base_sleep = 5
 
     for attempt in range(max_retries):
         try:
@@ -33,8 +35,14 @@ def fetch_yahoo_prices(symbol: str, days: int = 730) -> pd.DataFrame:
                     print(f"yfinance info for {symbol}: {json.dumps(info)}")
                 except Exception as info_err:
                     print(f"Could not fetch yfinance info for {symbol}: {info_err}")
+                # Check for 429 Too Many Requests in the last error
+                if 'Too Many Requests' in str(info_err):
+                    sleep_time = base_sleep * (2 ** attempt)
+                    print(f"429 Too Many Requests detected. Sleeping for {sleep_time} seconds before retrying...")
+                    time.sleep(sleep_time)
+                    continue
                 if attempt < max_retries - 1:
-                    time.sleep(5)
+                    time.sleep(base_sleep)
                     continue
                 return pd.DataFrame()  # Return empty if all retries fail
 
@@ -54,8 +62,14 @@ def fetch_yahoo_prices(symbol: str, days: int = 730) -> pd.DataFrame:
             # Log the exception details for debugging
             import traceback
             traceback.print_exc()
+            # Check for 429 Too Many Requests in the exception
+            if '429' in str(e) or 'Too Many Requests' in str(e):
+                sleep_time = base_sleep * (2 ** attempt)
+                print(f"429 Too Many Requests detected. Sleeping for {sleep_time} seconds before retrying...")
+                time.sleep(sleep_time)
+                continue
             if attempt < max_retries - 1:
-                time.sleep(10)
+                time.sleep(base_sleep)
                 continue
             print(f"All attempts failed for {symbol}. Returning empty DataFrame.")
             return pd.DataFrame()
