@@ -31,34 +31,28 @@ jobs:
         uses: google-github-actions/auth@v2
         with:
           credentials_json: ${{ secrets.GCP_SA_KEY }}
-
       - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@v2
         with:
           project_id: finnhubmacostrategy
           install_components: 'beta'
-
       - name: Build Docker image
         run: |
           docker build -t us-central1-docker.pkg.dev/finnhubmacostrategy/maco/maco:${{ github.sha }} .
-
       - name: Push Docker image to Artifact Registry
         run: |
           gcloud auth configure-docker us-central1-docker.pkg.dev
           docker push us-central1-docker.pkg.dev/finnhubmacostrategy/maco/maco:${{ github.sha }}
-
       - name: Update Cloud Run Job: maco-backfill
         run: |
           gcloud beta run jobs update maco-backfill \
             --image us-central1-docker.pkg.dev/finnhubmacostrategy/maco/maco:${{ github.sha }} \
             --region us-central1
-
       - name: Update Cloud Run Job: maco-compute-maco
         run: |
           gcloud beta run jobs update maco-compute-maco \
             --image us-central1-docker.pkg.dev/finnhubmacostrategy/maco/maco:${{ github.sha }} \
             --region us-central1
-
       - name: Update Cloud Run Job: maco-daily-snapshot
         run: |
           gcloud beta run jobs update maco-daily-snapshot \
