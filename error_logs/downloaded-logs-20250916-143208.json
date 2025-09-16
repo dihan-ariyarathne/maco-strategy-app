@@ -1,0 +1,274 @@
+[
+  {
+    "textPayload": "Starting new instance. Reason: AUTOSCALING - Instance started due to configured scaling factors (e.g. CPU utilization, request throughput, etc.) or no existing capacity for current traffic.",
+    "insertId": "68c86985000830ad73d989aa",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1",
+        "job_name": "maco-daily-snapshot"
+      }
+    },
+    "timestamp": "2025-09-15T19:31:17.536749Z",
+    "severity": "INFO",
+    "labels": {
+      "run.googleapis.com/task_attempt": "-1",
+      "run.googleapis.com/execution_name": "maco-daily-snapshot-frhzt",
+      "scaling_reason": "AUTOSCALING",
+      "instanceId": "0069c7a988361e83b02fc66bb3b9d3f3159cf12ee5c764d76c295216fece62b30b87e47f6bfc822a94df056c575b1c6833200c171cf0eb49aecd95b8d3e03987ae5c78256ca1a80a6271d7198bdf8b",
+      "run.googleapis.com/task_index": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fvarlog%2Fsystem",
+    "receiveTimestamp": "2025-09-15T19:31:17.543539725Z"
+  },
+  {
+    "textPayload": "Application exec likely failed",
+    "insertId": "68c86985000a93d2ea5409a5",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1",
+        "job_name": "maco-daily-snapshot"
+      }
+    },
+    "timestamp": "2025-09-15T19:31:17.693159979Z",
+    "severity": "WARNING",
+    "labels": {
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/execution_name": "maco-daily-snapshot-frhzt",
+      "instanceId": "0069c7a988361e83b02fc66bb3b9d3f3159cf12ee5c764d76c295216fece62b30b87e47f6bfc822a94df056c575b1c6833200c171cf0eb49aecd95b8d3e03987ae5c78256ca1a80a6271d7198bdf8b",
+      "run.googleapis.com/task_index": "0",
+      "container_name": "maco-1"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fvarlog%2Fsystem",
+    "receiveTimestamp": "2025-09-15T19:31:17.877127783Z"
+  },
+  {
+    "textPayload": "terminated: Application failed to start: The container may have exited abnormally.",
+    "insertId": "68c86985000a93c7903dc3ec",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-daily-snapshot",
+        "location": "us-central1",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-15T19:31:17.693160374Z",
+    "severity": "ERROR",
+    "labels": {
+      "instanceId": "0069c7a988361e83b02fc66bb3b9d3f3159cf12ee5c764d76c295216fece62b30b87e47f6bfc822a94df056c575b1c6833200c171cf0eb49aecd95b8d3e03987ae5c78256ca1a80a6271d7198bdf8b",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/execution_name": "maco-daily-snapshot-frhzt"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fvarlog%2Fsystem",
+    "receiveTimestamp": "2025-09-15T19:31:17.877127783Z"
+  },
+  {
+    "textPayload": "Starting new instance. Reason: AUTOSCALING - Instance started due to configured scaling factors (e.g. CPU utilization, request throughput, etc.) or no existing capacity for current traffic.",
+    "insertId": "68c869b900051a6902a7e2d4",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1",
+        "job_name": "maco-daily-snapshot"
+      }
+    },
+    "timestamp": "2025-09-15T19:32:09.334441Z",
+    "severity": "INFO",
+    "labels": {
+      "run.googleapis.com/task_index": "0",
+      "instanceId": "0069c7a988ed5e3ef2b3c983e1ce1cc6e869d20282a97508d58bb2a620097922f1abbc0e3e6d1d2e564313a8d34fabcfd1c0ef082adafc5ec7624c38969c2101fb915987f32787368ec81d535e4cc2",
+      "run.googleapis.com/execution_name": "maco-daily-snapshot-frhzt",
+      "run.googleapis.com/task_attempt": "-1",
+      "scaling_reason": "AUTOSCALING"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fvarlog%2Fsystem",
+    "receiveTimestamp": "2025-09-15T19:32:09.340639813Z"
+  },
+  {
+    "textPayload": "Application exec likely failed",
+    "insertId": "68c869b900071a4417acb4e3",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-daily-snapshot",
+        "location": "us-central1",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-15T19:32:09.465460314Z",
+    "severity": "WARNING",
+    "labels": {
+      "run.googleapis.com/execution_name": "maco-daily-snapshot-frhzt",
+      "instanceId": "0069c7a988ed5e3ef2b3c983e1ce1cc6e869d20282a97508d58bb2a620097922f1abbc0e3e6d1d2e564313a8d34fabcfd1c0ef082adafc5ec7624c38969c2101fb915987f32787368ec81d535e4cc2",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/task_attempt": "1",
+      "container_name": "maco-1"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fvarlog%2Fsystem",
+    "receiveTimestamp": "2025-09-15T19:32:09.677667309Z"
+  },
+  {
+    "textPayload": "terminated: Application failed to start: The container may have exited abnormally.",
+    "insertId": "68c869b900071a3caa6d1b78",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1",
+        "job_name": "maco-daily-snapshot"
+      }
+    },
+    "timestamp": "2025-09-15T19:32:09.465460498Z",
+    "severity": "ERROR",
+    "labels": {
+      "run.googleapis.com/execution_name": "maco-daily-snapshot-frhzt",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/task_attempt": "1",
+      "instanceId": "0069c7a988ed5e3ef2b3c983e1ce1cc6e869d20282a97508d58bb2a620097922f1abbc0e3e6d1d2e564313a8d34fabcfd1c0ef082adafc5ec7624c38969c2101fb915987f32787368ec81d535e4cc2"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fvarlog%2Fsystem",
+    "receiveTimestamp": "2025-09-15T19:32:09.677667309Z"
+  },
+  {
+    "textPayload": "Starting new instance. Reason: AUTOSCALING - Instance started due to configured scaling factors (e.g. CPU utilization, request throughput, etc.) or no existing capacity for current traffic.",
+    "insertId": "68c869ed0004d012a029b065",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1",
+        "job_name": "maco-daily-snapshot"
+      }
+    },
+    "timestamp": "2025-09-15T19:33:01.315410Z",
+    "severity": "INFO",
+    "labels": {
+      "run.googleapis.com/task_attempt": "-1",
+      "run.googleapis.com/execution_name": "maco-daily-snapshot-frhzt",
+      "instanceId": "0069c7a988bc50ea6e25c0e96b59d0c6aff3e7216b853ee886a0774837df3e02d2d00f6e86d27c0d76b214f2b9b70066dfb677776ce9d9b3cf092859d640910ca8c56ca4e6d182daf4b25a034569",
+      "run.googleapis.com/task_index": "0",
+      "scaling_reason": "AUTOSCALING"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fvarlog%2Fsystem",
+    "receiveTimestamp": "2025-09-15T19:33:01.363647608Z"
+  },
+  {
+    "textPayload": "Application exec likely failed",
+    "insertId": "68c869ed000647bbbe987a66",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "location": "us-central1",
+        "project_id": "finnhubmacostrategy",
+        "job_name": "maco-daily-snapshot"
+      }
+    },
+    "timestamp": "2025-09-15T19:33:01.411529188Z",
+    "severity": "WARNING",
+    "labels": {
+      "run.googleapis.com/execution_name": "maco-daily-snapshot-frhzt",
+      "run.googleapis.com/task_attempt": "2",
+      "instanceId": "0069c7a988bc50ea6e25c0e96b59d0c6aff3e7216b853ee886a0774837df3e02d2d00f6e86d27c0d76b214f2b9b70066dfb677776ce9d9b3cf092859d640910ca8c56ca4e6d182daf4b25a034569",
+      "container_name": "maco-1",
+      "run.googleapis.com/task_index": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fvarlog%2Fsystem",
+    "receiveTimestamp": "2025-09-15T19:33:01.656478158Z"
+  },
+  {
+    "textPayload": "terminated: Application failed to start: The container may have exited abnormally.",
+    "insertId": "68c869ed000647ae4ba4c4d9",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-daily-snapshot",
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-09-15T19:33:01.411529633Z",
+    "severity": "ERROR",
+    "labels": {
+      "instanceId": "0069c7a988bc50ea6e25c0e96b59d0c6aff3e7216b853ee886a0774837df3e02d2d00f6e86d27c0d76b214f2b9b70066dfb677776ce9d9b3cf092859d640910ca8c56ca4e6d182daf4b25a034569",
+      "run.googleapis.com/task_attempt": "2",
+      "run.googleapis.com/execution_name": "maco-daily-snapshot-frhzt",
+      "run.googleapis.com/task_index": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fvarlog%2Fsystem",
+    "receiveTimestamp": "2025-09-15T19:33:01.656478158Z"
+  },
+  {
+    "textPayload": "Starting new instance. Reason: AUTOSCALING - Instance started due to configured scaling factors (e.g. CPU utilization, request throughput, etc.) or no existing capacity for current traffic.",
+    "insertId": "68c86a190008215ea97a3f78",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "location": "us-central1",
+        "job_name": "maco-daily-snapshot",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-15T19:33:45.532830Z",
+    "severity": "INFO",
+    "labels": {
+      "instanceId": "0069c7a98854310a7871dcc8826a3b1552f30697321b67bb1dce53ae22408a2ea2ba2771965bd80f7133b9a4dca788a0fd8f759183ad9cdeca3a552d5921e51d39f9054bc6ee5e759ff7801d3d85",
+      "scaling_reason": "AUTOSCALING",
+      "run.googleapis.com/task_attempt": "-1",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/execution_name": "maco-daily-snapshot-frhzt"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fvarlog%2Fsystem",
+    "receiveTimestamp": "2025-09-15T19:33:45.540791583Z"
+  },
+  {
+    "textPayload": "Application exec likely failed",
+    "insertId": "68c86a190009d7e2250b35ee",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-daily-snapshot",
+        "location": "us-central1",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-15T19:33:45.645070514Z",
+    "severity": "WARNING",
+    "labels": {
+      "container_name": "maco-1",
+      "instanceId": "0069c7a98854310a7871dcc8826a3b1552f30697321b67bb1dce53ae22408a2ea2ba2771965bd80f7133b9a4dca788a0fd8f759183ad9cdeca3a552d5921e51d39f9054bc6ee5e759ff7801d3d85",
+      "run.googleapis.com/execution_name": "maco-daily-snapshot-frhzt",
+      "run.googleapis.com/task_attempt": "3",
+      "run.googleapis.com/task_index": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fvarlog%2Fsystem",
+    "receiveTimestamp": "2025-09-15T19:33:45.870737882Z"
+  },
+  {
+    "textPayload": "terminated: Application failed to start: The container may have exited abnormally.",
+    "insertId": "68c86a190009d7d713687cf4",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-daily-snapshot",
+        "location": "us-central1",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-15T19:33:45.645070815Z",
+    "severity": "ERROR",
+    "labels": {
+      "instanceId": "0069c7a98854310a7871dcc8826a3b1552f30697321b67bb1dce53ae22408a2ea2ba2771965bd80f7133b9a4dca788a0fd8f759183ad9cdeca3a552d5921e51d39f9054bc6ee5e759ff7801d3d85",
+      "run.googleapis.com/execution_name": "maco-daily-snapshot-frhzt",
+      "run.googleapis.com/task_attempt": "3",
+      "run.googleapis.com/task_index": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fvarlog%2Fsystem",
+    "receiveTimestamp": "2025-09-15T19:33:45.870737882Z"
+  }
+]

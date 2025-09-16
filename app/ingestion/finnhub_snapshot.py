@@ -91,6 +91,8 @@ def load_to_prices_1d(df: pd.DataFrame) -> None:
 
 
 def run(symbols: Optional[list[str]] = None) -> None:
+    if not settings.finnhub_api_key:
+        raise RuntimeError("FINNHUB_API_KEY is not set; cannot call Finnhub APIs.")
     target_symbols = symbols or settings.symbols
     frames: list[pd.DataFrame] = []
     for sym in target_symbols:
