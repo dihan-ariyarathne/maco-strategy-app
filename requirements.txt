@@ -1,0 +1,16 @@
+pandas==2.2.2
+pyarrow==16.1.0
+yfinance==0.2.43
+requests==2.32.3
+python-dateutil==2.9.0.post0
+numpy==2.0.1
+# Google Cloud
+google-cloud-storage==2.18.2
+google-cloud-bigquery==3.25.0
+google-cloud-secret-manager==2.20.2
+pandas-gbq==0.24.0
+# Runtime
+fastparquet==2024.5.0
+loguru==0.7.2
+pydantic==2.8.2
+python-dotenv==1.0.1
