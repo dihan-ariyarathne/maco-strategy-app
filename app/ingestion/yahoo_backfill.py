@@ -17,9 +17,9 @@ def fetch_yahoo_prices(symbol: str, days: int = 730) -> pd.DataFrame:
     import time
     import json
     import requests
-    max_retries = 7
+    max_retries = 4
     base_sleep = 10
-    max_sleep = 300  # Maximum sleep time of 5 minutes
+    max_sleep = 60  # Maximum sleep time of 1 minute
 
     for attempt in range(max_retries):
         try:
@@ -48,16 +48,6 @@ def fetch_yahoo_prices(symbol: str, days: int = 730) -> pd.DataFrame:
                     time.sleep(sleep_time)
                     continue
                 return pd.DataFrame()  # Return empty if all retries fail
-
-            # Rest of the function...
-            df = df.rename(columns={
-                "Open": "open", "High": "high", "Low": "low",
-                "Close": "close", "Volume": "volume"
-            })
-            df.reset_index(inplace=True)
-            df.rename(columns={"Date": "trade_date"}, inplace=True)
-            df["symbol"] = symbol
-            return df[["trade_date", "open", "high", "low", "close", "volume", "symbol"]]
 
         except Exception as e:
             print(f"Error fetching {symbol}, attempt {attempt + 1}: {e}")
