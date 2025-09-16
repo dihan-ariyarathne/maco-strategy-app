@@ -16,7 +16,6 @@ from google.cloud import bigquery
 def fetch_yahoo_prices(symbol: str, days: int = 730) -> pd.DataFrame:
     import time
     import json
-    import requests
     max_retries = 4
     base_sleep = 10
     max_sleep = 60  # Maximum sleep time of 1 minute
@@ -25,7 +24,17 @@ def fetch_yahoo_prices(symbol: str, days: int = 730) -> pd.DataFrame:
         try:
             end_date = date.today()
             start_date = end_date - timedelta(days=days)
-            df = yf.download(symbol, start=start_date, end=end_date, interval="1d", auto_adjust=False)
+            df = yf.download(
+                symbol,
+                start=start_date,
+                end=end_date,
+                interval="1d",
+                auto_adjust=False,
+                progress=False,
+            )
+
+            if isinstance(df.columns, pd.MultiIndex):
+                df.columns = df.columns.get_level_values(0)
 
             if df.empty:
                 print(f"Warning: No data for {symbol}, attempt {attempt + 1}")
@@ -33,7 +42,7 @@ def fetch_yahoo_prices(symbol: str, days: int = 730) -> pd.DataFrame:
                 try:
                     ticker = yf.Ticker(symbol)
                     info = ticker.info
-                    print(f"yfinance info for {symbol}: {json.dumps(info)}")
+                    print(f"yfinance info for {symbol}: {json.dumps(info, default=str)}")
                 except Exception as info_err:
                     print(f"Could not fetch yfinance info for {symbol}: {info_err}")
                     # Check for 429 Too Many Requests in the last error
@@ -48,6 +57,40 @@ def fetch_yahoo_prices(symbol: str, days: int = 730) -> pd.DataFrame:
                     time.sleep(sleep_time)
                     continue
                 return pd.DataFrame()  # Return empty if all retries fail
+
+            # Normalize the output once data has been fetched successfully
+            df = df.reset_index().rename(
+                columns={
+                    'Date': 'trade_date',
+                    'Open': 'open',
+                    'High': 'high',
+                    'Low': 'low',
+                    'Close': 'close',
+                    'Adj Close': 'adj_close',
+                    'Volume': 'volume',
+                }
+            )
+            df.columns.name = None
+            df['trade_date'] = pd.to_datetime(df['trade_date']).dt.date
+            df['symbol'] = symbol
+            df['provider'] = 'yahoo'
+            # Ensure all expected columns exist
+            for col in ['adj_close', 'volume']:
+                if col not in df.columns:
+                    df[col] = pd.NA
+            ordered_cols = [
+                'trade_date',
+                'open',
+                'high',
+                'low',
+                'close',
+                'adj_close',
+                'volume',
+                'symbol',
+                'provider',
+            ]
+            df = df[ordered_cols]
+            return df
 
         except Exception as e:
             print(f"Error fetching {symbol}, attempt {attempt + 1}: {e}")
@@ -67,6 +110,8 @@ def fetch_yahoo_prices(symbol: str, days: int = 730) -> pd.DataFrame:
                 continue
             print(f"All attempts failed for {symbol}. Returning empty DataFrame.")
             return pd.DataFrame()
+
+    return pd.DataFrame()
 
 
 def write_raw_to_gcs(df: pd.DataFrame, symbol: str) -> list[str]:
