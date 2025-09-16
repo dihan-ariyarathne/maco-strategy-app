@@ -35,12 +35,12 @@ def fetch_yahoo_prices(symbol: str, days: int = 730) -> pd.DataFrame:
                     print(f"yfinance info for {symbol}: {json.dumps(info)}")
                 except Exception as info_err:
                     print(f"Could not fetch yfinance info for {symbol}: {info_err}")
-                # Check for 429 Too Many Requests in the last error
-                if 'Too Many Requests' in str(info_err):
-                    sleep_time = base_sleep * (2 ** attempt)
-                    print(f"429 Too Many Requests detected. Sleeping for {sleep_time} seconds before retrying...")
-                    time.sleep(sleep_time)
-                    continue
+                    # Check for 429 Too Many Requests in the last error
+                    if 'Too Many Requests' in str(info_err):
+                        sleep_time = base_sleep * (2 ** attempt)
+                        print(f"429 Too Many Requests detected. Sleeping for {sleep_time} seconds before retrying...")
+                        time.sleep(sleep_time)
+                        continue
                 if attempt < max_retries - 1:
                     time.sleep(base_sleep)
                     continue
