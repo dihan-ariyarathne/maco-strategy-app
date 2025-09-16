@@ -43,18 +43,18 @@ jobs:
         run: |
           gcloud auth configure-docker us-central1-docker.pkg.dev
           docker push us-central1-docker.pkg.dev/finnhubmacostrategy/maco/maco:${{ github.sha }}
-      - name: Update Cloud Run Job: maco-backfill
+      - name: Update Cloud Run Job maco-backfill
         run: |
-          gcloud beta run jobs update maco-backfill \
-            --image us-central1-docker.pkg.dev/finnhubmacostrategy/maco/maco:${{ github.sha }} \
+          gcloud beta run jobs update maco-backfill 
+            --image us-central1-docker.pkg.dev/finnhubmacostrategy/maco/maco:${{ github.sha }} 
             --region us-central1
-      - name: Update Cloud Run Job: maco-compute-maco
+      - name: Update Cloud Run Job maco-compute-maco
         run: |
-          gcloud beta run jobs update maco-compute-maco \
-            --image us-central1-docker.pkg.dev/finnhubmacostrategy/maco/maco:${{ github.sha }} \
+          gcloud beta run jobs update maco-compute-maco 
+            --image us-central1-docker.pkg.dev/finnhubmacostrategy/maco/maco:${{ github.sha }} 
             --region us-central1
-      - name: Update Cloud Run Job: maco-daily-snapshot
+      - name: Update Cloud Run Job maco-daily-snapshot
         run: |
-          gcloud beta run jobs update maco-daily-snapshot \
-            --image us-central1-docker.pkg.dev/finnhubmacostrategy/maco/maco:${{ github.sha }} \
+          gcloud beta run jobs update maco-daily-snapshot 
+            --image us-central1-docker.pkg.dev/finnhubmacostrategy/maco/maco:${{ github.sha }} 
             --region us-central1
