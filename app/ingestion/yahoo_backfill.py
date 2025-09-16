@@ -52,13 +52,12 @@ def fetch_yahoo_prices(symbol: str, days: int = 730) -> pd.DataFrame:
             # Rest of the function...
             df = df.rename(columns={
                 "Open": "open", "High": "high", "Low": "low",
-                "Close": "close", "Adj Close": "adj_close", "Volume": "volume"
+                "Close": "close", "Volume": "volume"
             })
             df.reset_index(inplace=True)
             df.rename(columns={"Date": "trade_date"}, inplace=True)
             df["symbol"] = symbol
-            df["provider"] = "yahoo"
-            return df[["trade_date", "open", "high", "low", "close", "adj_close", "volume", "symbol", "provider"]]
+            return df[["trade_date", "open", "high", "low", "close", "volume", "symbol"]]
 
         except Exception as e:
             print(f"Error fetching {symbol}, attempt {attempt + 1}: {e}")
