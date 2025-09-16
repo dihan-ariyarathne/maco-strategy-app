@@ -15,24 +15,32 @@ from google.cloud import bigquery
 # In app/ingestion/yahoo_backfill.py, update fetch_yahoo_prices function:
 def fetch_yahoo_prices(symbol: str, days: int = 730) -> pd.DataFrame:
     import time
+    import json
     max_retries = 3
-    
+
     for attempt in range(max_retries):
         try:
             end_date = date.today()
             start_date = end_date - timedelta(days=days)
             df = yf.download(symbol, start=start_date, end=end_date, interval="1d")
-            
+
             if df.empty:
                 print(f"Warning: No data for {symbol}, attempt {attempt + 1}")
+                # Try to log the raw response from yfinance if possible
+                try:
+                    ticker = yf.Ticker(symbol)
+                    info = ticker.info
+                    print(f"yfinance info for {symbol}: {json.dumps(info)}")
+                except Exception as info_err:
+                    print(f"Could not fetch yfinance info for {symbol}: {info_err}")
                 if attempt < max_retries - 1:
                     time.sleep(5)
                     continue
                 return pd.DataFrame()  # Return empty if all retries fail
-            
+
             # Rest of the function...
             df = df.rename(columns={
-                "Open": "open", "High": "high", "Low": "low", 
+                "Open": "open", "High": "high", "Low": "low",
                 "Close": "close", "Adj Close": "adj_close", "Volume": "volume"
             })
             df.reset_index(inplace=True)
@@ -40,13 +48,17 @@ def fetch_yahoo_prices(symbol: str, days: int = 730) -> pd.DataFrame:
             df["symbol"] = symbol
             df["provider"] = "yahoo"
             return df[["trade_date", "open", "high", "low", "close", "adj_close", "volume", "symbol", "provider"]]
-            
+
         except Exception as e:
             print(f"Error fetching {symbol}, attempt {attempt + 1}: {e}")
+            # Log the exception details for debugging
+            import traceback
+            traceback.print_exc()
             if attempt < max_retries - 1:
                 time.sleep(10)
                 continue
-            raise
+            print(f"All attempts failed for {symbol}. Returning empty DataFrame.")
+            return pd.DataFrame()
 
 
 def write_raw_to_gcs(df: pd.DataFrame, symbol: str) -> list[str]:
@@ -95,10 +107,15 @@ def run(symbols: Iterable[str] | None = None, days: int = 730) -> None:
     all_frames: list[pd.DataFrame] = []
     for sym in target_symbols:
         df = fetch_yahoo_prices(sym, days=days)
+        if df.empty:
+            print(f"No data fetched for {sym}. Skipping downstream processing for this symbol.")
+            continue
         write_raw_to_gcs(df, sym)
         all_frames.append(df)
     if all_frames:
         load_to_prices_1d(pd.concat(all_frames, ignore_index=True))
+    else:
+        print("No valid data frames to load to prices_1d.")
 
 
 if __name__ == "__main__":
