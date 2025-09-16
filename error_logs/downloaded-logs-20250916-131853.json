@@ -1,0 +1,1833 @@
+[
+  {
+    "textPayload": "Starting new instance. Reason: AUTOSCALING - Instance started due to configured scaling factors (e.g. CPU utilization, request throughput, etc.) or no existing capacity for current traffic.",
+    "insertId": "68c91516000d83a926bc2651",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "location": "us-central1",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:43:18.885673Z",
+    "severity": "INFO",
+    "labels": {
+      "run.googleapis.com/task_attempt": "-1",
+      "run.googleapis.com/task_index": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "scaling_reason": "AUTOSCALING",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fvarlog%2Fsystem",
+    "receiveTimestamp": "2025-09-16T07:43:18.892526854Z"
+  },
+  {
+    "textPayload": "Failed to get ticker 'AAPL' reason: Expecting value: line 1 column 1 (char 0)",
+    "insertId": "68c9151d00058638b12b01e0",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-09-16T07:43:25.362040Z",
+    "labels": {
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_index": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:43:25.366752714Z"
+  },
+  {
+    "textPayload": "1 Failed download:",
+    "insertId": "68c9151d0005a7413d2dadc2",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "project_id": "finnhubmacostrategy",
+        "job_name": "maco-backfill",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-09-16T07:43:25.370497Z",
+    "labels": {
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_index": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:43:25.702132122Z"
+  },
+  {
+    "textPayload": "['AAPL']: YFTzMissingError('$%ticker%: possibly delisted; no timezone found')",
+    "insertId": "68c9151d0005a759d1ab35df",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "location": "us-central1",
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:43:25.370521Z",
+    "labels": {
+      "run.googleapis.com/task_attempt": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:43:25.702132122Z"
+  },
+  {
+    "textPayload": "Warning: No data for AAPL, attempt 1",
+    "insertId": "68c9151d0005a7817976a642",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-09-16T07:43:25.370561Z",
+    "labels": {
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/task_attempt": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:43:25.376240054Z"
+  },
+  {
+    "textPayload": "429 Client Error: Too Many Requests for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/AAPL?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&corsDomain=finance.yahoo.com&formatted=false&symbol=AAPL&crumb=Edge%3A+Too+Many+Requests",
+    "insertId": "68c9151d000a7b54e1f8b13a",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "project_id": "finnhubmacostrategy",
+        "job_name": "maco-backfill",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-09-16T07:43:25.686932Z",
+    "labels": {
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/task_index": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:43:25.702132122Z"
+  },
+  {
+    "textPayload": "Could not fetch yfinance info for AAPL: Expecting value: line 1 column 1 (char 0)",
+    "insertId": "68c9151d000ee62e04c8be78",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "location": "us-central1",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:43:25.976430Z",
+    "labels": {
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:43:26.042770945Z"
+  },
+  {
+    "textPayload": "Sleeping for 10 seconds before retrying...",
+    "insertId": "68c9151d000ee63bb8587531",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1",
+        "job_name": "maco-backfill"
+      }
+    },
+    "timestamp": "2025-09-16T07:43:25.976443Z",
+    "labels": {
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/task_attempt": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:43:26.042770945Z"
+  },
+  {
+    "textPayload": "Failed to get ticker 'AAPL' reason: Expecting value: line 1 column 1 (char 0)",
+    "insertId": "68c91527000eed446fb44b47",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "location": "us-central1",
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:43:35.978244Z",
+    "labels": {
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_index": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:43:36.024273542Z"
+  },
+  {
+    "textPayload": "1 Failed download:",
+    "insertId": "68c91527000f11c6f07a6222",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "location": "us-central1",
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:43:35.987590Z",
+    "labels": {
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/task_attempt": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:43:36.024273542Z"
+  },
+  {
+    "textPayload": "['AAPL']: YFTzMissingError('$%ticker%: possibly delisted; no timezone found')",
+    "insertId": "68c91527000f11e4528ddf3c",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "location": "us-central1",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:43:35.987620Z",
+    "labels": {
+      "run.googleapis.com/task_attempt": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:43:36.024273542Z"
+  },
+  {
+    "textPayload": "Warning: No data for AAPL, attempt 2",
+    "insertId": "68c91527000f123549a1b29a",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1",
+        "job_name": "maco-backfill"
+      }
+    },
+    "timestamp": "2025-09-16T07:43:35.987701Z",
+    "labels": {
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_attempt": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:43:36.033172346Z"
+  },
+  {
+    "textPayload": "429 Client Error: Too Many Requests for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/AAPL?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&corsDomain=finance.yahoo.com&formatted=false&symbol=AAPL&crumb=Edge%3A+Too+Many+Requests",
+    "insertId": "68c915280003f45272e69472",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "project_id": "finnhubmacostrategy",
+        "job_name": "maco-backfill",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-09-16T07:43:36.259154Z",
+    "labels": {
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:43:36.358382342Z"
+  },
+  {
+    "textPayload": "Could not fetch yfinance info for AAPL: Expecting value: line 1 column 1 (char 0)",
+    "insertId": "68c915280003f5ef1aec30bc",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1",
+        "job_name": "maco-backfill"
+      }
+    },
+    "timestamp": "2025-09-16T07:43:36.259567Z",
+    "labels": {
+      "run.googleapis.com/task_attempt": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:43:36.364372121Z"
+  },
+  {
+    "textPayload": "Sleeping for 20 seconds before retrying...",
+    "insertId": "68c915280003f5f8c4adff8e",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "location": "us-central1",
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:43:36.259576Z",
+    "labels": {
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/task_attempt": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:43:36.364372121Z"
+  },
+  {
+    "textPayload": "Failed to get ticker 'AAPL' reason: Expecting value: line 1 column 1 (char 0)",
+    "insertId": "68c9153c0003fe3411e07458",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "location": "us-central1",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:43:56.261684Z",
+    "labels": {
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_attempt": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_index": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:43:56.265551744Z"
+  },
+  {
+    "textPayload": "1 Failed download:",
+    "insertId": "68c9153c0004235a193ffa78",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "location": "us-central1",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:43:56.271194Z",
+    "labels": {
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/task_index": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:43:56.599704908Z"
+  },
+  {
+    "textPayload": "['AAPL']: YFTzMissingError('$%ticker%: possibly delisted; no timezone found')",
+    "insertId": "68c9153c0004237665da54e6",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "location": "us-central1",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:43:56.271222Z",
+    "labels": {
+      "run.googleapis.com/task_index": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:43:56.599704908Z"
+  },
+  {
+    "textPayload": "Warning: No data for AAPL, attempt 3",
+    "insertId": "68c9153c00042433cd3d9ea8",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1",
+        "job_name": "maco-backfill"
+      }
+    },
+    "timestamp": "2025-09-16T07:43:56.271411Z",
+    "labels": {
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/task_attempt": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:43:56.275970605Z"
+  },
+  {
+    "textPayload": "429 Client Error: Too Many Requests for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/AAPL?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&corsDomain=finance.yahoo.com&formatted=false&symbol=AAPL&crumb=Edge%3A+Too+Many+Requests",
+    "insertId": "68c9153c00080f2a08d92485",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "location": "us-central1",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:43:56.528170Z",
+    "labels": {
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/task_attempt": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:43:56.599704908Z"
+  },
+  {
+    "textPayload": "Could not fetch yfinance info for AAPL: Expecting value: line 1 column 1 (char 0)",
+    "insertId": "68c9153c00080fb8aa5d7cf0",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-09-16T07:43:56.528312Z",
+    "labels": {
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_attempt": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:43:56.610887238Z"
+  },
+  {
+    "textPayload": "Sleeping for 40 seconds before retrying...",
+    "insertId": "68c9153c00080fc2d619d234",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "location": "us-central1",
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:43:56.528322Z",
+    "labels": {
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/task_attempt": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:43:56.610887238Z"
+  },
+  {
+    "textPayload": "Failed to get ticker 'AAPL' reason: Expecting value: line 1 column 1 (char 0)",
+    "insertId": "68c9156400081a0081e909be",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1",
+        "job_name": "maco-backfill"
+      }
+    },
+    "timestamp": "2025-09-16T07:44:36.530944Z",
+    "labels": {
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_attempt": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:44:36.536488001Z"
+  },
+  {
+    "textPayload": "1 Failed download:",
+    "insertId": "68c9156400083d31ecef8163",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "project_id": "finnhubmacostrategy",
+        "job_name": "maco-backfill",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-09-16T07:44:36.539953Z",
+    "labels": {
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/task_index": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:44:36.868754239Z"
+  },
+  {
+    "textPayload": "['AAPL']: YFTzMissingError('$%ticker%: possibly delisted; no timezone found')",
+    "insertId": "68c9156400083d4df755de94",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "location": "us-central1",
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:44:36.539981Z",
+    "labels": {
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_index": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:44:36.868754239Z"
+  },
+  {
+    "textPayload": "Warning: No data for AAPL, attempt 4",
+    "insertId": "68c9156400083dc68be5fb83",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1",
+        "job_name": "maco-backfill"
+      }
+    },
+    "timestamp": "2025-09-16T07:44:36.540102Z",
+    "labels": {
+      "run.googleapis.com/task_index": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_attempt": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:44:36.545150937Z"
+  },
+  {
+    "textPayload": "429 Client Error: Too Many Requests for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/AAPL?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&corsDomain=finance.yahoo.com&formatted=false&symbol=AAPL&crumb=Edge%3A+Too+Many+Requests",
+    "insertId": "68c915650000f92d2b83b28c",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "location": "us-central1",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:44:37.063789Z",
+    "labels": {
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:44:37.204634257Z"
+  },
+  {
+    "textPayload": "Could not fetch yfinance info for AAPL: Expecting value: line 1 column 1 (char 0)",
+    "insertId": "68c915650000fb74a4e079c9",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "project_id": "finnhubmacostrategy",
+        "job_name": "maco-backfill",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-09-16T07:44:37.064372Z",
+    "labels": {
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_attempt": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_index": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:44:37.212387607Z"
+  },
+  {
+    "textPayload": "No data fetched for AAPL. Skipping downstream processing for this symbol.",
+    "insertId": "68c9156500010d82e8fbb6cb",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-09-16T07:44:37.068994Z",
+    "labels": {
+      "run.googleapis.com/task_attempt": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_index": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:44:37.212387607Z"
+  },
+  {
+    "textPayload": "Failed to get ticker 'TSLA' reason: Expecting value: line 1 column 1 (char 0)",
+    "insertId": "68c9156500067c8a23f62749",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "location": "us-central1",
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:44:37.425098Z",
+    "labels": {
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_index": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:44:37.535762416Z"
+  },
+  {
+    "textPayload": "1 Failed download:",
+    "insertId": "68c915650006801b94c8d65d",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "location": "us-central1",
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:44:37.426011Z",
+    "labels": {
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/task_index": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:44:37.535762416Z"
+  },
+  {
+    "textPayload": "['TSLA']: YFTzMissingError('$%ticker%: possibly delisted; no timezone found')",
+    "insertId": "68c915650006802ffd188d91",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "location": "us-central1",
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:44:37.426031Z",
+    "labels": {
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/task_index": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:44:37.535762416Z"
+  },
+  {
+    "textPayload": "Warning: No data for TSLA, attempt 1",
+    "insertId": "68c91565000680966e9af79b",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-09-16T07:44:37.426134Z",
+    "labels": {
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_index": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:44:37.545594656Z"
+  },
+  {
+    "textPayload": "429 Client Error: Too Many Requests for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/TSLA?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&corsDomain=finance.yahoo.com&formatted=false&symbol=TSLA&crumb=Edge%3A+Too+Many+Requests",
+    "insertId": "68c91565000afee99e00290c",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "location": "us-central1",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:44:37.720617Z",
+    "labels": {
+      "run.googleapis.com/task_index": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_attempt": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:44:37.868534235Z"
+  },
+  {
+    "textPayload": "Could not fetch yfinance info for TSLA: Expecting value: line 1 column 1 (char 0)",
+    "insertId": "68c915660000073acd7629c3",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-09-16T07:44:38.001850Z",
+    "labels": {
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_attempt": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:44:38.211299491Z"
+  },
+  {
+    "textPayload": "Sleeping for 10 seconds before retrying...",
+    "insertId": "68c91566000007432b46c2d0",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-09-16T07:44:38.001859Z",
+    "labels": {
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_index": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:44:38.211299491Z"
+  },
+  {
+    "textPayload": "Failed to get ticker 'TSLA' reason: Expecting value: line 1 column 1 (char 0)",
+    "insertId": "68c9157000000f58cbd0d494",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "location": "us-central1",
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:44:48.003928Z",
+    "labels": {
+      "run.googleapis.com/task_attempt": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_index": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:44:48.192865389Z"
+  },
+  {
+    "textPayload": "1 Failed download:",
+    "insertId": "68c915700000328572ef50d8",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "location": "us-central1",
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:44:48.012933Z",
+    "labels": {
+      "run.googleapis.com/task_index": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:44:48.192865389Z"
+  },
+  {
+    "textPayload": "['TSLA']: YFTzMissingError('$%ticker%: possibly delisted; no timezone found')",
+    "insertId": "68c9157000003298ad1a7443",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-09-16T07:44:48.012952Z",
+    "labels": {
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/task_index": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:44:48.192865389Z"
+  },
+  {
+    "textPayload": "Warning: No data for TSLA, attempt 2",
+    "insertId": "68c915700000329b24d1ca79",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1",
+        "job_name": "maco-backfill"
+      }
+    },
+    "timestamp": "2025-09-16T07:44:48.012955Z",
+    "labels": {
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_index": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:44:48.203655442Z"
+  },
+  {
+    "textPayload": "429 Client Error: Too Many Requests for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/TSLA?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&corsDomain=finance.yahoo.com&formatted=false&symbol=TSLA&crumb=Edge%3A+Too+Many+Requests",
+    "insertId": "68c91570000431962e95d9f6",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-09-16T07:44:48.274838Z",
+    "labels": {
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/task_index": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:44:48.526156639Z"
+  },
+  {
+    "textPayload": "Could not fetch yfinance info for TSLA: Expecting value: line 1 column 1 (char 0)",
+    "insertId": "68c915700004331cece7971c",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "project_id": "finnhubmacostrategy",
+        "job_name": "maco-backfill",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-09-16T07:44:48.275228Z",
+    "labels": {
+      "run.googleapis.com/task_index": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:44:48.533495455Z"
+  },
+  {
+    "textPayload": "Sleeping for 20 seconds before retrying...",
+    "insertId": "68c915700004332648a8cfc1",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "project_id": "finnhubmacostrategy",
+        "job_name": "maco-backfill",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-09-16T07:44:48.275238Z",
+    "labels": {
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_index": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:44:48.533495455Z"
+  },
+  {
+    "textPayload": "Failed to get ticker 'TSLA' reason: Expecting value: line 1 column 1 (char 0)",
+    "insertId": "68c9158400043b2ad70b9f9a",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-09-16T07:45:08.277290Z",
+    "labels": {
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_index": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_attempt": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:45:08.282925093Z"
+  },
+  {
+    "textPayload": "1 Failed download:",
+    "insertId": "68c9158400045fb1c08a3541",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "project_id": "finnhubmacostrategy",
+        "job_name": "maco-backfill",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-09-16T07:45:08.286641Z",
+    "labels": {
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/task_attempt": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:45:08.616925913Z"
+  },
+  {
+    "textPayload": "['TSLA']: YFTzMissingError('$%ticker%: possibly delisted; no timezone found')",
+    "insertId": "68c9158400045fc74ef047d8",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "location": "us-central1",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:45:08.286663Z",
+    "labels": {
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/task_attempt": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:45:08.616925913Z"
+  },
+  {
+    "textPayload": "Warning: No data for TSLA, attempt 3",
+    "insertId": "68c91584000460a417f4909a",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "location": "us-central1",
+        "project_id": "finnhubmacostrategy",
+        "job_name": "maco-backfill"
+      }
+    },
+    "timestamp": "2025-09-16T07:45:08.286884Z",
+    "labels": {
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/task_index": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:45:08.292971831Z"
+  },
+  {
+    "textPayload": "429 Client Error: Too Many Requests for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/TSLA?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&corsDomain=finance.yahoo.com&formatted=false&symbol=TSLA&crumb=Edge%3A+Too+Many+Requests",
+    "insertId": "68c91584000902ef52e8f489",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "project_id": "finnhubmacostrategy",
+        "job_name": "maco-backfill",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-09-16T07:45:08.590575Z",
+    "labels": {
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:45:08.616925913Z"
+  },
+  {
+    "textPayload": "Could not fetch yfinance info for TSLA: Expecting value: line 1 column 1 (char 0)",
+    "insertId": "68c91584000904849c92efe2",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "location": "us-central1",
+        "project_id": "finnhubmacostrategy",
+        "job_name": "maco-backfill"
+      }
+    },
+    "timestamp": "2025-09-16T07:45:08.590980Z",
+    "labels": {
+      "run.googleapis.com/task_attempt": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:45:08.624871527Z"
+  },
+  {
+    "textPayload": "Sleeping for 40 seconds before retrying...",
+    "insertId": "68c915840009048c6aa0e26a",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-09-16T07:45:08.590988Z",
+    "labels": {
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_attempt": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_index": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:45:08.624871527Z"
+  },
+  {
+    "textPayload": "Failed to get ticker 'TSLA' reason: Expecting value: line 1 column 1 (char 0)",
+    "insertId": "68c915ac00090f3bd327cc16",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "location": "us-central1",
+        "project_id": "finnhubmacostrategy",
+        "job_name": "maco-backfill"
+      }
+    },
+    "timestamp": "2025-09-16T07:45:48.593723Z",
+    "labels": {
+      "run.googleapis.com/task_index": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_attempt": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:45:48.600014334Z"
+  },
+  {
+    "textPayload": "1 Failed download:",
+    "insertId": "68c915ac00093276de767e38",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "location": "us-central1",
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:45:48.602742Z",
+    "labels": {
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_attempt": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:45:48.933230170Z"
+  },
+  {
+    "textPayload": "['TSLA']: YFTzMissingError('$%ticker%: possibly delisted; no timezone found')",
+    "insertId": "68c915ac0009329602df1ade",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "project_id": "finnhubmacostrategy",
+        "job_name": "maco-backfill",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-09-16T07:45:48.602774Z",
+    "labels": {
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_index": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:45:48.933230170Z"
+  },
+  {
+    "textPayload": "Warning: No data for TSLA, attempt 4",
+    "insertId": "68c915ac000932aa5d1e3dbe",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-09-16T07:45:48.602794Z",
+    "labels": {
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/task_attempt": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:45:48.608784162Z"
+  },
+  {
+    "textPayload": "429 Client Error: Too Many Requests for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/TSLA?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&corsDomain=finance.yahoo.com&formatted=false&symbol=TSLA&crumb=Edge%3A+Too+Many+Requests",
+    "insertId": "68c915ac000d4df5a37a00e5",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1",
+        "job_name": "maco-backfill"
+      }
+    },
+    "timestamp": "2025-09-16T07:45:48.871925Z",
+    "labels": {
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:45:48.933230170Z"
+  },
+  {
+    "textPayload": "Could not fetch yfinance info for TSLA: Expecting value: line 1 column 1 (char 0)",
+    "insertId": "68c915ac000d4eed4946b156",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1",
+        "job_name": "maco-backfill"
+      }
+    },
+    "timestamp": "2025-09-16T07:45:48.872173Z",
+    "labels": {
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/task_attempt": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:45:48.940018892Z"
+  },
+  {
+    "textPayload": "No data fetched for TSLA. Skipping downstream processing for this symbol.",
+    "insertId": "68c915ac000d510c5aacdaec",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1",
+        "job_name": "maco-backfill"
+      }
+    },
+    "timestamp": "2025-09-16T07:45:48.872716Z",
+    "labels": {
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/task_index": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:45:48.940018892Z"
+  },
+  {
+    "textPayload": "Failed to get ticker 'BTC-USD' reason: Expecting value: line 1 column 1 (char 0)",
+    "insertId": "68c915ad00021bc361947295",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-09-16T07:45:49.138179Z",
+    "labels": {
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/task_index": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:45:49.264256658Z"
+  },
+  {
+    "textPayload": "1 Failed download:",
+    "insertId": "68c915ad00021f6410d3df2c",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "location": "us-central1",
+        "project_id": "finnhubmacostrategy",
+        "job_name": "maco-backfill"
+      }
+    },
+    "timestamp": "2025-09-16T07:45:49.139108Z",
+    "labels": {
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/task_attempt": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:45:49.264256658Z"
+  },
+  {
+    "textPayload": "Warning: No data for BTC-USD, attempt 1",
+    "insertId": "68c915ad00021f69d08f3bc4",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1",
+        "job_name": "maco-backfill"
+      }
+    },
+    "timestamp": "2025-09-16T07:45:49.139113Z",
+    "labels": {
+      "run.googleapis.com/task_attempt": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_index": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:45:49.279899695Z"
+  },
+  {
+    "textPayload": "['BTC-USD']: YFTzMissingError('$%ticker%: possibly delisted; no timezone found')",
+    "insertId": "68c915ad00021f7bc1d644fb",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "location": "us-central1",
+        "project_id": "finnhubmacostrategy",
+        "job_name": "maco-backfill"
+      }
+    },
+    "timestamp": "2025-09-16T07:45:49.139131Z",
+    "labels": {
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:45:49.264256658Z"
+  },
+  {
+    "textPayload": "429 Client Error: Too Many Requests for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/BTC-USD?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&corsDomain=finance.yahoo.com&formatted=false&symbol=BTC-USD&crumb=Edge%3A+Too+Many+Requests",
+    "insertId": "68c915ad00063b2f5942fe2e",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "location": "us-central1",
+        "project_id": "finnhubmacostrategy",
+        "job_name": "maco-backfill"
+      }
+    },
+    "timestamp": "2025-09-16T07:45:49.408367Z",
+    "labels": {
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/task_attempt": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:45:49.599440532Z"
+  },
+  {
+    "textPayload": "Could not fetch yfinance info for BTC-USD: Expecting value: line 1 column 1 (char 0)",
+    "insertId": "68c915ad000a69849c235815",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-09-16T07:45:49.682372Z",
+    "labels": {
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/task_attempt": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:45:49.943257743Z"
+  },
+  {
+    "textPayload": "Sleeping for 10 seconds before retrying...",
+    "insertId": "68c915ad000a699010576367",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "location": "us-central1",
+        "project_id": "finnhubmacostrategy",
+        "job_name": "maco-backfill"
+      }
+    },
+    "timestamp": "2025-09-16T07:45:49.682384Z",
+    "labels": {
+      "run.googleapis.com/task_attempt": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:45:49.943257743Z"
+  },
+  {
+    "textPayload": "Failed to get ticker 'BTC-USD' reason: Expecting value: line 1 column 1 (char 0)",
+    "insertId": "68c915b7000a76143ab186c5",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "location": "us-central1",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:45:59.685588Z",
+    "labels": {
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:45:59.920329640Z"
+  },
+  {
+    "textPayload": "1 Failed download:",
+    "insertId": "68c915b7000a9ac2b76911a1",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "project_id": "finnhubmacostrategy",
+        "job_name": "maco-backfill",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-09-16T07:45:59.694978Z",
+    "labels": {
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/task_index": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:45:59.920329640Z"
+  },
+  {
+    "textPayload": "['BTC-USD']: YFTzMissingError('$%ticker%: possibly delisted; no timezone found')",
+    "insertId": "68c915b7000a9ae32ce8efd5",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1",
+        "job_name": "maco-backfill"
+      }
+    },
+    "timestamp": "2025-09-16T07:45:59.695011Z",
+    "labels": {
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:45:59.920329640Z"
+  },
+  {
+    "textPayload": "Warning: No data for BTC-USD, attempt 2",
+    "insertId": "68c915b7000a9b8786f7d560",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-09-16T07:45:59.695175Z",
+    "labels": {
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:45:59.928873608Z"
+  },
+  {
+    "textPayload": "429 Client Error: Too Many Requests for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/BTC-USD?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&corsDomain=finance.yahoo.com&formatted=false&symbol=BTC-USD&crumb=Edge%3A+Too+Many+Requests",
+    "insertId": "68c915b7000f14b08adc251d",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-09-16T07:45:59.988336Z",
+    "labels": {
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/task_index": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:46:00.261051021Z"
+  },
+  {
+    "textPayload": "Could not fetch yfinance info for BTC-USD: Expecting value: line 1 column 1 (char 0)",
+    "insertId": "68c915b7000f165520acff59",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-09-16T07:45:59.988757Z",
+    "labels": {
+      "run.googleapis.com/task_attempt": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_index": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:46:00.264082085Z"
+  },
+  {
+    "textPayload": "Sleeping for 20 seconds before retrying...",
+    "insertId": "68c915b7000f165f9f166122",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "location": "us-central1",
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:45:59.988767Z",
+    "labels": {
+      "run.googleapis.com/task_index": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:46:00.264082085Z"
+  },
+  {
+    "textPayload": "Failed to get ticker 'BTC-USD' reason: Expecting value: line 1 column 1 (char 0)",
+    "insertId": "68c915cb000f1ec94655b4af",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-09-16T07:46:19.990921Z",
+    "labels": {
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:46:19.996902654Z"
+  },
+  {
+    "textPayload": "1 Failed download:",
+    "insertId": "68c915cb000f423a17123d28",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "location": "us-central1",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:46:19.999994Z",
+    "labels": {
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_attempt": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:46:20.329010321Z"
+  },
+  {
+    "textPayload": "['BTC-USD']: YFTzMissingError('$%ticker%: possibly delisted; no timezone found')",
+    "insertId": "68c915cc00000018ee4bc6d9",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "location": "us-central1",
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:46:20.000024Z",
+    "labels": {
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/task_attempt": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:46:20.329010321Z"
+  },
+  {
+    "textPayload": "Warning: No data for BTC-USD, attempt 3",
+    "insertId": "68c915cc000000cee6d7ebfa",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-09-16T07:46:20.000206Z",
+    "labels": {
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/task_attempt": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:46:20.005323331Z"
+  },
+  {
+    "textPayload": "429 Client Error: Too Many Requests for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/BTC-USD?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&corsDomain=finance.yahoo.com&formatted=false&symbol=BTC-USD&crumb=Edge%3A+Too+Many+Requests",
+    "insertId": "68c915cc0008156f28a7aac3",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "project_id": "finnhubmacostrategy",
+        "job_name": "maco-backfill",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-09-16T07:46:20.529775Z",
+    "labels": {
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:46:20.663307924Z"
+  },
+  {
+    "textPayload": "Could not fetch yfinance info for BTC-USD: Expecting value: line 1 column 1 (char 0)",
+    "insertId": "68c915cc0008171c7c6812ae",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "location": "us-central1",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:46:20.530204Z",
+    "labels": {
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:46:20.675379536Z"
+  },
+  {
+    "textPayload": "Sleeping for 40 seconds before retrying...",
+    "insertId": "68c915cc0008172648c92f59",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "location": "us-central1",
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:46:20.530214Z",
+    "labels": {
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/task_attempt": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:46:20.675379536Z"
+  },
+  {
+    "textPayload": "Failed to get ticker 'BTC-USD' reason: Expecting value: line 1 column 1 (char 0)",
+    "insertId": "68c915f4000820b2fea2d485",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-09-16T07:47:00.532658Z",
+    "labels": {
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_index": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:47:00.540165281Z"
+  },
+  {
+    "textPayload": "1 Failed download:",
+    "insertId": "68c915f40008449972f73c98",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "location": "us-central1",
+        "project_id": "finnhubmacostrategy",
+        "job_name": "maco-backfill"
+      }
+    },
+    "timestamp": "2025-09-16T07:47:00.541849Z",
+    "labels": {
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/task_index": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:47:00.873584161Z"
+  },
+  {
+    "textPayload": "['BTC-USD']: YFTzMissingError('$%ticker%: possibly delisted; no timezone found')",
+    "insertId": "68c915f4000844b8c75445c0",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "project_id": "finnhubmacostrategy",
+        "location": "us-central1",
+        "job_name": "maco-backfill"
+      }
+    },
+    "timestamp": "2025-09-16T07:47:00.541880Z",
+    "labels": {
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_index": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:47:00.873584161Z"
+  },
+  {
+    "textPayload": "Warning: No data for BTC-USD, attempt 4",
+    "insertId": "68c915f4000844ba30a8fa3a",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "location": "us-central1",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:47:00.541882Z",
+    "labels": {
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_attempt": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:47:00.550935619Z"
+  },
+  {
+    "textPayload": "429 Client Error: Too Many Requests for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/BTC-USD?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&corsDomain=finance.yahoo.com&formatted=false&symbol=BTC-USD&crumb=Edge%3A+Too+Many+Requests",
+    "insertId": "68c915f4000c7566a578d749",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "location": "us-central1",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:47:00.816486Z",
+    "labels": {
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/task_index": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-09-16T07:47:00.873584161Z"
+  },
+  {
+    "textPayload": "Could not fetch yfinance info for BTC-USD: Expecting value: line 1 column 1 (char 0)",
+    "insertId": "68c915f4000c778f96ffb848",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "location": "us-central1",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:47:00.817039Z",
+    "labels": {
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_index": "0",
+      "run.googleapis.com/task_attempt": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:47:00.881743401Z"
+  },
+  {
+    "textPayload": "No data fetched for BTC-USD. Skipping downstream processing for this symbol.",
+    "insertId": "68c915f4000c797f22ce5fb5",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "location": "us-central1",
+        "job_name": "maco-backfill",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:47:00.817535Z",
+    "labels": {
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/task_index": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:47:00.881743401Z"
+  },
+  {
+    "textPayload": "No valid data frames to load to prices_1d.",
+    "insertId": "68c915f4000c7989c12c8e1c",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "location": "us-central1",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:47:00.817545Z",
+    "labels": {
+      "run.googleapis.com/task_attempt": "0",
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_index": "0"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2025-09-16T07:47:00.881743401Z"
+  },
+  {
+    "textPayload": "Container called exit(0).",
+    "insertId": "68c915f50002eb817385c5fc",
+    "resource": {
+      "type": "cloud_run_job",
+      "labels": {
+        "job_name": "maco-backfill",
+        "location": "us-central1",
+        "project_id": "finnhubmacostrategy"
+      }
+    },
+    "timestamp": "2025-09-16T07:47:01.191204Z",
+    "severity": "INFO",
+    "labels": {
+      "instanceId": "0069c7a9882a90398e8842cf8b29cab9413d66372065faf5d69e41d59c98ce361a8e158a6e7b845005a4ac78a9e9479ecf48fe9c255441242f6515e636a702aaf1056c3e30a407146f51d9da1f8fbd",
+      "run.googleapis.com/execution_name": "maco-backfill-2pn4h",
+      "run.googleapis.com/task_attempt": "0",
+      "run.googleapis.com/task_index": "0",
+      "container_name": "maco-1"
+    },
+    "logName": "projects/finnhubmacostrategy/logs/run.googleapis.com%2Fvarlog%2Fsystem",
+    "receiveTimestamp": "2025-09-16T07:47:01.197820712Z"
+  }
+]
