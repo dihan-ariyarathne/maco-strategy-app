@@ -4,7 +4,7 @@ from datetime import date, timedelta
 from typing import Iterable
 
 import pandas as pd
-import yfinance as yf
+
 
 from app.config import settings
 from app.utils.gcs import build_partition_path, upload_dataframe_as_parquet
@@ -14,62 +14,85 @@ from google.cloud import bigquery
 
 # In app/ingestion/yahoo_backfill.py, update fetch_yahoo_prices function:
 def fetch_yahoo_prices(symbol: str, days: int = 730) -> pd.DataFrame:
-    import time
     import random
+    import time
+    from datetime import datetime, time as dtime, timezone
 
-    max_retries = 4
+    import requests
+
+    max_retries = 6
     base_sleep = 10
-    max_sleep = 60  # Maximum sleep time of 1 minute
+    max_sleep = 120  # Cap backoff to 2 minutes
+    session = requests.Session()
+    session.headers.update(
+        {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+        }
+    )
 
     for attempt in range(max_retries):
         try:
             end_date = date.today()
             start_date = end_date - timedelta(days=days)
-            df = yf.download(
-                symbol,
-                start=start_date,
-                end=end_date,
-                interval="1d",
-                auto_adjust=False,
-                progress=False,
+            start_dt = datetime.combine(start_date, dtime.min, tzinfo=timezone.utc)
+            end_dt = datetime.combine(end_date + timedelta(days=1), dtime.min, tzinfo=timezone.utc)
+            params = {
+                'period1': int(start_dt.timestamp()),
+                'period2': int(end_dt.timestamp()),
+                'interval': '1d',
+                'includePrePost': 'false',
+                'events': 'div,splits',
+            }
+            response = session.get(
+                f'https://query1.finance.yahoo.com/v8/finance/chart/{symbol}',
+                params=params,
+                timeout=30,
             )
+            if response.status_code == 429:
+                raise requests.HTTPError('429 Too Many Requests', response=response)
+            response.raise_for_status()
+            payload = response.json().get('chart', {})
+            results = payload.get('result') or []
+            if not results:
+                raise ValueError(f'Yahoo chart API returned no result for {symbol}')
 
-            if isinstance(df.columns, pd.MultiIndex):
-                df.columns = df.columns.get_level_values(0)
+            chart = results[0]
+            timestamps = chart.get('timestamp') or []
+            quote = (chart.get('indicators') or {}).get('quote') or [{}]
+            adj = (chart.get('indicators') or {}).get('adjclose') or [{}]
+            quote = quote[0] if isinstance(quote, list) else quote
+            adj = adj[0] if isinstance(adj, list) else adj
 
+            opens = quote.get('open') or []
+            highs = quote.get('high') or []
+            lows = quote.get('low') or []
+            closes = quote.get('close') or []
+            volumes = quote.get('volume') or []
+            adj_close = adj.get('adjclose') or []
+
+            if not timestamps or not closes:
+                raise ValueError(f'Yahoo chart API returned empty candles for {symbol}')
+
+            records = []
+            for idx, ts in enumerate(timestamps):
+                records.append(
+                    {
+                        'trade_date': datetime.utcfromtimestamp(ts).date(),
+                        'open': opens[idx] if idx < len(opens) else None,
+                        'high': highs[idx] if idx < len(highs) else None,
+                        'low': lows[idx] if idx < len(lows) else None,
+                        'close': closes[idx] if idx < len(closes) else None,
+                        'adj_close': adj_close[idx] if idx < len(adj_close) else None,
+                        'volume': volumes[idx] if idx < len(volumes) else None,
+                    }
+                )
+
+            df = pd.DataFrame(records)
             if df.empty:
-                print(f"Warning: No data for {symbol}, attempt {attempt + 1}")
-                if attempt < max_retries - 1:
-                    sleep_time = min(base_sleep * (2 ** attempt), max_sleep)
-                    jitter = random.uniform(0, base_sleep)
-                    total_sleep = min(sleep_time + jitter, max_sleep)
-                    print(
-                        f"Sleeping for {total_sleep:.1f} seconds before retrying (possible rate limit)."
-                    )
-                    time.sleep(total_sleep)
-                    continue
-                return pd.DataFrame()  # Return empty if all retries fail
+                raise ValueError(f'Parsed Yahoo data frame is empty for {symbol}')
 
-            # Normalize the output once data has been fetched successfully
-            df = df.reset_index().rename(
-                columns={
-                    'Date': 'trade_date',
-                    'Open': 'open',
-                    'High': 'high',
-                    'Low': 'low',
-                    'Close': 'close',
-                    'Adj Close': 'adj_close',
-                    'Volume': 'volume',
-                }
-            )
-            df.columns.name = None
-            df['trade_date'] = pd.to_datetime(df['trade_date']).dt.date
             df['symbol'] = symbol
             df['provider'] = 'yahoo'
-            # Ensure all expected columns exist
-            for col in ['adj_close', 'volume']:
-                if col not in df.columns:
-                    df[col] = pd.NA
             ordered_cols = [
                 'trade_date',
                 'open',
@@ -84,28 +107,29 @@ def fetch_yahoo_prices(symbol: str, days: int = 730) -> pd.DataFrame:
             df = df[ordered_cols]
             return df
 
-        except Exception as e:
-            print(f"Error fetching {symbol}, attempt {attempt + 1}: {e}")
+        except Exception as exc:
+            print(f'Error fetching {symbol}, attempt {attempt + 1}: {exc}')
             import traceback
 
             traceback.print_exc()
-            if '429' in str(e) or 'Too Many Requests' in str(e):
+            should_retry = True
+            if isinstance(exc, requests.HTTPError):
+                status_code = getattr(exc.response, 'status_code', None)
+                if status_code and status_code >= 500:
+                    should_retry = True
+                elif status_code == 404:
+                    should_retry = False
+                elif status_code != 429:
+                    should_retry = attempt < max_retries - 1
+
+            if attempt < max_retries - 1 and should_retry:
                 sleep_time = min(base_sleep * (2 ** attempt), max_sleep)
                 jitter = random.uniform(0, base_sleep)
                 total_sleep = min(sleep_time + jitter, max_sleep)
-                print(
-                    f"429 Too Many Requests detected. Sleeping for {total_sleep:.1f} seconds before retrying..."
-                )
+                print(f'Sleeping for {total_sleep:.1f} seconds before retrying...')
                 time.sleep(total_sleep)
                 continue
-            if attempt < max_retries - 1:
-                sleep_time = min(base_sleep * (2 ** attempt), max_sleep)
-                jitter = random.uniform(0, base_sleep)
-                total_sleep = min(sleep_time + jitter, max_sleep)
-                print(f"Sleeping for {total_sleep:.1f} seconds before retrying...")
-                time.sleep(total_sleep)
-                continue
-            print(f"All attempts failed for {symbol}. Returning empty DataFrame.")
+            print(f'All attempts failed for {symbol}. Returning empty DataFrame.')
             return pd.DataFrame()
 
     return pd.DataFrame()
