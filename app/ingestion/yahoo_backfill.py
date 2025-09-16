@@ -17,8 +17,9 @@ def fetch_yahoo_prices(symbol: str, days: int = 730) -> pd.DataFrame:
     import time
     import json
     import requests
-    max_retries = 5
-    base_sleep = 5
+    max_retries = 7
+    base_sleep = 10
+    max_sleep = 300  # Maximum sleep time of 5 minutes
 
     for attempt in range(max_retries):
         try:
@@ -37,12 +38,14 @@ def fetch_yahoo_prices(symbol: str, days: int = 730) -> pd.DataFrame:
                     print(f"Could not fetch yfinance info for {symbol}: {info_err}")
                     # Check for 429 Too Many Requests in the last error
                     if 'Too Many Requests' in str(info_err):
-                        sleep_time = base_sleep * (2 ** attempt)
+                        sleep_time = min(base_sleep * (2 ** attempt), max_sleep)
                         print(f"429 Too Many Requests detected. Sleeping for {sleep_time} seconds before retrying...")
                         time.sleep(sleep_time)
                         continue
                 if attempt < max_retries - 1:
-                    time.sleep(base_sleep)
+                    sleep_time = min(base_sleep * (2 ** attempt), max_sleep)
+                    print(f"Sleeping for {sleep_time} seconds before retrying...")
+                    time.sleep(sleep_time)
                     continue
                 return pd.DataFrame()  # Return empty if all retries fail
 
@@ -64,12 +67,14 @@ def fetch_yahoo_prices(symbol: str, days: int = 730) -> pd.DataFrame:
             traceback.print_exc()
             # Check for 429 Too Many Requests in the exception
             if '429' in str(e) or 'Too Many Requests' in str(e):
-                sleep_time = base_sleep * (2 ** attempt)
+                sleep_time = min(base_sleep * (2 ** attempt), max_sleep)
                 print(f"429 Too Many Requests detected. Sleeping for {sleep_time} seconds before retrying...")
                 time.sleep(sleep_time)
                 continue
             if attempt < max_retries - 1:
-                time.sleep(base_sleep)
+                sleep_time = min(base_sleep * (2 ** attempt), max_sleep)
+                print(f"Sleeping for {sleep_time} seconds before retrying...")
+                time.sleep(sleep_time)
                 continue
             print(f"All attempts failed for {symbol}. Returning empty DataFrame.")
             return pd.DataFrame()
