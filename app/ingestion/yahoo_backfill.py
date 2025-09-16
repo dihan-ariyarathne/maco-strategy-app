@@ -24,7 +24,7 @@ def fetch_yahoo_prices(symbol: str, days: int = 730) -> pd.DataFrame:
         try:
             end_date = date.today()
             start_date = end_date - timedelta(days=days)
-            df = yf.download(symbol, start=start_date, end=end_date, interval="1d")
+            df = yf.download(symbol, start=start_date, end=end_date, interval="1d", auto_adjust=False)
 
             if df.empty:
                 print(f"Warning: No data for {symbol}, attempt {attempt + 1}")
@@ -78,7 +78,14 @@ def fetch_yahoo_prices(symbol: str, days: int = 730) -> pd.DataFrame:
 def write_raw_to_gcs(df: pd.DataFrame, symbol: str) -> list[str]:
     uris: list[str] = []
     for _, row in df.iterrows():
-        trade_date: date = pd.to_datetime(row["trade_date"]).date()
+        trade_date = row["trade_date"]
+        # Handle possible types for trade_date
+        if isinstance(trade_date, pd.Series):
+            trade_date = trade_date.iloc[0]
+        if isinstance(trade_date, pd.Timestamp):
+            trade_date = trade_date.date()
+        elif isinstance(trade_date, str):
+            trade_date = pd.to_datetime(trade_date).date()
         object_name = build_partition_path("raw/yahoo_finance", symbol, trade_date, "candles.parquet")
         uris.append(
             upload_dataframe_as_parquet(
